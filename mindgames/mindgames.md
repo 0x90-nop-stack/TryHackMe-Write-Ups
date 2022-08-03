@@ -1,5 +1,6 @@
 # Mindgames write-up.
-![](/img/room.JPG)
+![room](https://user-images.githubusercontent.com/110361097/182584894-83f22081-1cbf-4aa8-afab-7ae39ffc5c1a.JPG)
+
 HINT: No hints. Hack it. Don't give up if you get stuck, enumerate harder.
 
 ## Preparation:
@@ -16,7 +17,7 @@ Scan the IP address with nmap.
 
 **Result:**
 
-![](/img/res-1.JPG)
+![res-1](https://user-images.githubusercontent.com/110361097/182585019-1fcc6006-034d-4816-8ddb-53f77c7340b5.JPG)
 
 So, we have ports 22 and 80 with services as ssh/web server.
 
@@ -28,6 +29,8 @@ Let's see what's on port 80's initial page.
 **Result:**
 
 ![](/img/res-2.JPG)
+![res-2](https://user-images.githubusercontent.com/110361097/182585173-f003d266-95f9-44e0-9990-8f3da077f2c8.JPG)
+
 
 Possible Pivot Routes/Points Of Interest:
 
@@ -75,7 +78,7 @@ Python Reverse Shell:
 
 Brainfuck wrapped:
 
-`			+++++ +++++ [->++ +++++ +++<] >++++ +.+++ +.+++ .-.++ +.++. <++++ +++++
+`	+++++ +++++ [->++ +++++ +++<] >++++ +.+++ +.+++ .-.++ +.++. <++++ +++++
             [->-- ----- --<]> ---.< +++++ +++[- >++++ ++++< ]>+++ +++++ +++++ ++.++
             ++.<+ +++++ ++[-> ----- ---<] >---- ---.< +++++ +++[- >++++ ++++< ]>+++
             +.+++ +.+++ ++.<+ +++++ ++[-> ----- ---<] >---- ----- ----. <++++ ++++[
@@ -122,7 +125,8 @@ Now submit the encoded reverse shell in the submission form with your netcat lis
 
 **Result:**
 
-![](/img/res-4.JPG)
+![res-4](https://user-images.githubusercontent.com/110361097/182585214-43e76183-9f44-4388-a18c-5161b0fcd2ac.JPG)
+
 
 We now have shell access! Let's look for the user.txt file.
 
@@ -130,11 +134,12 @@ Our initial directory path is "/home/mindgames/webserver", so goto the user's ho
 
 Perform a directory listing and find the "user.txt" file.
 
-![](/img/res-5.JPG)
+![res-5](https://user-images.githubusercontent.com/110361097/182585240-7594a3d0-bc4d-495c-a7bf-e5593d3fc568.JPG)
+
 
 ## Flag 1:
 
-![](/img/flag1.JPG)
+![flag1](https://user-images.githubusercontent.com/110361097/182585255-e6e3eee9-00da-4bc5-af83-8137b7f9296d.JPG)
 
 ## Privilege Escalation:
 
