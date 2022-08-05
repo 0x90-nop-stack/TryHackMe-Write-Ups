@@ -2,6 +2,9 @@
 ## Room write ups:
 
 [Mindgames - CTF - Medium Level](mindgames/mindgames.md)
+
+[Break it - CTF - Medium Level](breakit/breakit.md)
+
 ---
 ## Badges
 ![webbed](https://user-images.githubusercontent.com/110361097/182752028-68e5df6b-d339-40f3-b370-2b751354bc21.jpg)
