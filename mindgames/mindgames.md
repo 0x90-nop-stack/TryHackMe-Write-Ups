@@ -109,6 +109,19 @@ Perform a directory listing and find the "user.txt" file.
 
 ## Privilege Escalation:
 
-To be continued...
+### Target:
+
+File: /root/root.txt
+
+**Owned by:**
+
+User: root
+
+Steps:
+ * Enumerate for suid/guid bit set applications by the user.
+ * Modifiable dependencies/programs/files/jobs used by the target user account.
+ * Readable sensitive information for the target user.
+ * System or application vulnerabilities/exploits.
+ * Identify possible lower level users within same target group/permissions.
 
 **Result:**
