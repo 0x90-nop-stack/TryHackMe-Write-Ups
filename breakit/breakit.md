@@ -92,8 +92,10 @@ Decoding Method:
     From Base85
     From Base64
     From Base64
-    
+
 CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Base32('A-Z2-7%3D',true)From_Base85('!-u',true)From_Base64('A-Za-z0-9%2B/%3D',true,false)From_Base58('123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz',true)From_Base85('!-u',true)From_Base64('A-Za-z0-9%2B/%3D',true,false)From_Base64('A-Za-z0-9%2B/%3D',true,false)
+
+![image](https://user-images.githubusercontent.com/110361097/186613519-272b6261-3712-4a39-9dec-3a5091b897c1.png)  
 
 ---
 
@@ -111,8 +113,10 @@ CyberChef:
 
     From Base32
     From Base85
-    From Base10
-    From Base16
+    From Charcode (Base10)
+    From Charcode (Base16)
+
+CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Base32('A-Z2-7%3D',true)From_Base85('!-u',true)From_Charcode('Space',10)From_Charcode('Space',16)
 
 ![image](https://user-images.githubusercontent.com/110361097/186610098-0b7c845b-23a9-4ac1-9dc2-ea9434fbc551.png)
 
@@ -120,14 +124,18 @@ dCode:
 
     From Base91
 
+dCode: https://www.dcode.fr/base-91-encoding#f0
+
 ![image](https://user-images.githubusercontent.com/110361097/186610218-334f9277-ae5b-4c00-96f8-c0f0936b6564.png)
 
 CyberChef:
 
     From Base58
-    From Base16
+    From Charcode (Base16)
     From Base64
-    From Base10
-    From Base16
-    
+    From Charcode (Base10)
+    From Charcode (Base16)
+
+CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Base58('123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz',true)From_Charcode('Space',16)From_Base64('A-Za-z0-9%2B/%3D',true,false)From_Charcode('Space',10)From_Charcode('Space',16)
+
 ![image](https://user-images.githubusercontent.com/110361097/186610607-d1ea2a45-879f-4be7-aef1-f0016e056f65.png)
