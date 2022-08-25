@@ -1,4 +1,4 @@
-# Mindgames write-up.
+# Mindgames - write-up.
 ![room](https://user-images.githubusercontent.com/110361097/182584894-83f22081-1cbf-4aa8-afab-7ae39ffc5c1a.JPG)
 
 HINT: No hints. Hack it. Don't give up if you get stuck, enumerate harder.
