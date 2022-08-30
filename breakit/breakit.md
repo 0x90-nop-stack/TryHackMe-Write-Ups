@@ -139,3 +139,121 @@ CyberChef:
 CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Base58('123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz',true)From_Charcode('Space',16)From_Base64('A-Za-z0-9%2B/%3D',true,false)From_Charcode('Space',10)From_Charcode('Space',16)
 
 ![image](https://user-images.githubusercontent.com/110361097/186610607-d1ea2a45-879f-4be7-aef1-f0016e056f65.png)
+
+## Task 2: Base and cipher
+
+[Room Note]: How about mixing both base and cipher?
+
+[Easy]
+
+Encoded Message:
+    
+    PJXHQ4S7GEZV6ZTDOZQQ====
+
+[Hint]: Base or cipher or both?
+
+Decoding Method: 
+
+    From Base32
+    ROT13
+
+CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Base32('A-Z2-7%253D',true)ROT13(true,true,false,13)
+
+![image](https://user-images.githubusercontent.com/110361097/187334577-8b8a66e6-ae7d-4ef8-9c2e-612224ac04c5.png)
+
+---
+
+[Moderate]
+
+Encoded Message:
+    
+    NjZMKVhATl1EcEI2Jio4Q0xuVy1EZSo5ZkFLV0M6QVUtPFpGQ0InIkReYg==
+
+[Hint]:  It was deciphered in 1863
+
+Decoding Method: 
+
+    From Base64
+    From Base85
+
+![image](https://user-images.githubusercontent.com/110361097/187335326-c611589d-6038-481d-8ae1-162e4da866f5.png)
+
+[TIP]: Make note of the key at this stage
+
+Decoding Method: 
+
+    From Vigenère Decode
+
+CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)From_Base85('!-u',true)Vigen%C3%A8re_Decode('')
+
+![image](https://user-images.githubusercontent.com/110361097/187335459-ed32d309-90ce-481e-b0f6-d125c7c05612.png)
+
+---
+
+[Hard]
+
+Encoded Message:
+    
+    -!r/X,]n/Z-Zs\X,X$,rI<@]#-9Oh,-=A]R-p9\+
+
+[Hint]:  base, rot, base, base, rot. Ah, whatever
+
+Decoding Method: 
+
+    From Base85
+    ROT47
+    From Base64
+    From Base32
+    ROT13
+    
+CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Base85('!-u',true)ROT47(47)From_Base64('A-Za-z0-9%252B/%253D',true,false)From_Base32('A-Z2-7%253D',true)ROT13(true,true,false,13)
+
+![image](https://user-images.githubusercontent.com/110361097/187336185-6d2b12a8-f013-4aad-a196-1fa034567191.png)
+    
+---
+
+[Insane]
+
+Encoded Message:
+    
+    GZXSMPKXH4RGE4TKGQSVKYS3HJEUCXDMGJPDAXCSIE2SGQSIIFIWQRJZGBUUGKJJFU4T24DJIFISQSZSFY4VKMKUGZXSI2DLHRRTSXLKGQSVKYS3HUSG4LJQGFCW4OCOIE2SIZTAGQSSCJLFGBUUGKJJFU4T4J3NFNOUGM2BFY4VKMKUGZXSMPKXH4RGE4TKGQSVKYS3HNQVMXRMGEVFGL2NIE2SIIKMIFIWOQTRGBUUGKJJFU4T4J3NIMXWMSJGFY4VKMKUGZXSMPKXFURTKNJVGQSVKYS3HNQVMXRMGFQTIQKPIE2SGQSIIFIWQRJZGBUUGKJJFU4T24DJIFISQTRTFY4VKMKUGZXSMPKXFURTKNJVGQSVKYS3HNQVMXRMGFCW4OCOIE2SGLKDIFIWQY2FGBUUGKJJFU4T4XRKFNOUGKR6FY4VKMKUGRNCIX2SH4RGE4TKGQSVKYS3HUSG4LJQGBSDQJSMIE2SGQSIIFIWSQKRGBUUGKJJFU4T4URGFNOUGM2BFY4VKMKUGZXSI3CKIQXTU4JJGQSVKYS3IA3SURS6GFQTIQKPIE2SIZTAIFIWQRJZGBUUGKJJFU4T4XRKFNOUGM2BFY4VKMKUGRNCGNLGHRRTSXLKGQSVKYS3HUSG4LJQGFQTIQKPIE2SGLKDIFIWSU2ZGBUUGKJJFU4T24DJIFISQSZSFY4VKMKUHRES6NZNH4RGE4TKGQSVKYS3HUSG4LJQGFQTIQKPIE2SGLKDGRCWAZRHGBUUGKJJFU4T4J3NFNOUGKR6FY4VKMKUHRES2Y2OHRRTSXLKGQSVKYS3HJEUCXDMGJPDAXCSIE2SIIKMIFIWOQTRGBUUGKJJFU4T4J3NFNOUKXBSFY4VKMKUHRES2Y2OHRRTSXLKGQSVKYS3IA3SURS6GFCW4OCOIE2SIIKMIFIWQRJZGBUUGKJJFU4T24DJFNOUKXBSFY4VKMKUGZXSI2DLHRRTSXLKGQSVKYS3IFHUC2TCGFCW4OCOIE2SIIKMGRCWEUSYGBUUGKJJFU4T24DJIFISQTRTFY4VKMKUGRNCIX2SIBYW2X3SGQSVKYS3HUSG4LJQJA3E6ZKAIE2SIIKMGQSSCJLFGBUUGKJJFU4T4URGIMXWMSJGFY4VKMKUGRNCGNLGHRRTSXLKGQSVKYS3HJET6ORII5YDIXB7IE2SGQSIIFIWOQTRGBUUGKJJFU4T24DJFNOUGKR6FY4VKMKUHRES6NZNH4RGE4TKGQSVKYS3IA3SSMR2GITU6SSQIE2SIIKMIFIWSQKRGBUUGKJJFU4T24DJIFISQSZSFY4VKMKUGZXSMPKXGQUUQXKNGQSVKYS3HUSG4LJQGFCW4OCOIE2SIZTAIFIWQRJZGBUUGKJJFU4T4URGGZZFUKLIFY4VKMKUGRNCIX2SH4RGE4TKGQSVKYS3HJET6ORII5YDIXB7IE2SGQSIIFIWSQKRGBUUGKJJFU4T4XRKFNOUGLJ7FY4VKMKUGRNCIX2SIBYW2X3SGQSVKYS3HJET6ORII5YDIXB7IE2SIZTAIFIWSU2ZGBUUGKJJFU4T4XRKIFISQRKP
+
+[Hint]:  Oops, i put the key at the wrong place
+
+Decoding Method: 
+
+    From Base32
+    From Base85
+
+CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Base32('A-Z2-7%253D',true)From_Base85('!-u',true)
+
+![image](https://user-images.githubusercontent.com/110361097/187340260-54705f12-ce55-4e1b-bf13-e34fced4e7cb.png)
+
+Decoding Method: 
+
+    From Base91
+
+dCode: https://www.dcode.fr/base-91-encoding#f0
+
+![image](https://user-images.githubusercontent.com/110361097/187341911-aca52c2f-62db-4033-ba6d-8c3ee22cedf2.png)
+
+Decoding Method: 
+
+    From Charcode (Base10)
+    From Charcode (Base16)
+    From Base64
+
+CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Charcode('Space',10)From_Charcode('Space',16)From_Base64('A-Za-z0-9%252B/%253D',true,false)
+
+![image](https://user-images.githubusercontent.com/110361097/187341806-95138286-b39f-433a-8d0b-1405cdbd4a0a.png)
+
+[TIP] Make note of the key at this stage, remove the brackets and key text.
+
+Decoding Method:
+
+    From Base58
+    From Vigenère Decode
+
+CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Base58('123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz',true)Vigen%C3%A8re_Decode('')
+
+![image](https://user-images.githubusercontent.com/110361097/187343181-42d4d103-6dfb-489a-b216-aab25483a680.png)
