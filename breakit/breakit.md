@@ -257,3 +257,71 @@ Decoding Method:
 CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Base58('123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz',true)Vigen%C3%A8re_Decode('')
 
 ![image](https://user-images.githubusercontent.com/110361097/187343181-42d4d103-6dfb-489a-b216-aab25483a680.png)
+
+## Task 3: base, cipher, bit shift
+
+[Room Note]: Can you decode the combination? Maybe Hex workshop can help you out.
+
+[Moderate]
+
+Encoded Message:
+    
+    2D 37 2B 19 31 99 31 B3 B2 AB A5 18 32 37 20 B3 B2 AC 2D 1A 31 B4 A1 3A A4 A3 9C B4 AD 36 AC 9E
+
+[Hint]: Logic shift
+
+Decoding Method: 
+
+    From Hex
+    Rotate left (Amount: 1 - Carry through)
+    From Base64
+    ROT13
+
+CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')Rotate_left(1,true)From_Base64('A-Za-z0-9%2B/%3D',true,false)ROT13(true,true,false,13)
+
+![image](https://user-images.githubusercontent.com/110361097/187347123-f5413c6c-1e3e-42dd-a839-0e4090c078f1.png)
+
+---
+
+[Hard]
+
+Encoded Message:
+    
+    19 1A 1C 99 1C 9C A8 38 27 B2 34 27 B9 27 26 28 3C 3B AA 28 A5 AA 2A 29 3C 29 B2 B2 21 B1 AC A6 1C AC 29 A8 38 99 2C
+
+[Hint]:  Arithmetic shift (8 bits)
+
+Decoding Method: 
+
+    From Hex
+    Rotate left (Amount: 1)
+    From Base58
+    ROT13
+
+CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')Rotate_left(1,false)From_Base58('123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz',true)ROT13(true,true,false,13)
+
+![image](https://user-images.githubusercontent.com/110361097/187347478-7a9c2e46-4a1e-4532-972a-088f0aae843a.png)
+
+---
+
+[Insane]
+
+Encoded Message:
+    
+    A9 A8 2B EE 2A AA C9 C8 C9 AA A8 0F 2A 8A AA EE A9 8A CA A8 A9 4F 6D 46 E9 A8 A8 0F A9 8A 6D 86 A9 AA A9 26 2A 8A 48 E8
+
+[Hint]:  Arithmetic (8 bits), base, logic, base, rot (Best hints i can give)
+
+Decoding Method: 
+
+    From Hex
+    Rotate left (Amount: 3)
+    From Base64
+    
+CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')Rotate_left(3,false)From_Base64('A-Za-z0-9%252B/%253D',true,false)
+
+![image](https://user-images.githubusercontent.com/110361097/187350489-975b5273-69e5-4c59-839f-3d75b8d16308.png)
+
+Decoding Method: 
+
+    ...
