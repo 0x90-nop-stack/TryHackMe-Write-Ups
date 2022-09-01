@@ -324,4 +324,32 @@ CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')Rotate_left(
 
 Decoding Method: 
 
-    ...
+    The resulting output value will be a 30 character length hex value. 
+    
+    Split this hex string into two 15 character strings. 
+    
+    Pad both the hex strings with a 0 by adding 0 to the end of each 15 character string, making it 16 in length.
+    
+    Use calculator in programmer hex mode (or a hex capable calculator) to divide each hex 16 character string by 4.
+    
+    Concatenate both resulting hex values as (string1 string2) with no space between, then use this value for the next method.
+    
+![image](https://user-images.githubusercontent.com/110361097/187814010-e5c9bf44-fed7-4c9b-b287-3f897daf243a.png)
+
+![image](https://user-images.githubusercontent.com/110361097/187815742-f5cd42a1-c95e-4c05-9476-944b4b7be788.png)
+
+![image](https://user-images.githubusercontent.com/110361097/187815827-a6af53c8-51d8-4087-8a3e-8d61a24cd636.png)
+![image](https://user-images.githubusercontent.com/110361097/187815895-59edf36a-ec8a-48d3-8ea7-754b055d0b4b.png)
+
+![image](https://user-images.githubusercontent.com/110361097/187815945-1169bbaa-5671-446e-b0fd-9a244dd2d6d6.png)
+
+Decoding Method: 
+
+    From Hex
+    From Base85
+    ROT13
+
+CyberChef: https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')From_Base85('!-u',true)ROT13(true,true,false,13)
+
+![image](https://user-images.githubusercontent.com/110361097/187816313-3d0b60bc-3812-40d9-9847-594785ffb8d8.png)
+
